@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "https://faizur-djs-bot.onrender.com", //local
-    failureURL: "https://faizur-djs-bot.onrender.com", // failure redirect url
+    baseURL: "https://faizur-xd-bot.onrender.com", //local
+    failureURL: "https://faizur-xd-bot.onrender.com", // failure redirect url
     port: "8080", // port to run the bot on
   },
 

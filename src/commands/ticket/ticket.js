@@ -340,11 +340,10 @@ async function ticketModalSetup({ guild, channel, member }, targetChannel, setti
 
   // send ticket message
   const embed = new EmbedBuilder()
-  .setColorconst embed = new EmbedBuilder()
   .setColor(EMBED_COLORS.BOT_EMBED)
-  .setAuthor({ name: title || "Support Ticket" })
+  .setAuthor(title || "Support Ticket")
   .setDescription(description || "Please use the button below to create a ticket")
-  .setFooter({ text: footer || "You can only have 1 open ticket at a time!" });
+  .setFooter(footer || "You can only have 1 open ticket at a time!");
 
 const tktBtnRow = new ActionRowBuilder().addComponents(
   new ButtonBuilder().setLabel("Open a ticket").setCustomId("TICKET_CREATE").setStyle(ButtonStyle.Success)

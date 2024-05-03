@@ -1,14 +1,14 @@
 module.exports = {
   OWNER_IDS: ["916373880300511322"], // Bot owner ID's
-  SUPPORT_SERVER: "Not-Yet", // Your bot support server
+  SUPPORT_SERVER: "not-yet", // Your bot support server
   PREFIX_COMMANDS: {
     ENABLED: true, // Enable/Disable prefix commands
-    DEFAULT_PREFIX: "?!", // Default prefix for the bot
+    DEFAULT_PREFIX: ".", // Default prefix for the bot
   },
   INTERACTIONS: {
     SLASH: true, // Should the interactions be enabled
     CONTEXT: true, // Should contexts be enabled
-    GLOBAL: false, // Should the interactions be registered globally
+    GLOBAL: true, // Should the interactions be registered globally
     TEST_GUILD_ID: "1227295916067917855", // Guild ID where the interactions should be registered. [** Test you commands here first **]
   },
   EMBED_COLORS: {
@@ -36,9 +36,9 @@ module.exports = {
   },
 
   DASHBOARD: {
-    enabled: true, // enable or disable dashboard
-    baseURL: "https://faizur-djs-bot.onrender.com", //local
-    failureURL: "https://faizur-djs-bot.onrender.com", // failure redirect url
+    enabled: false, // enable or disable dashboard
+    baseURL: "http://localhost:8080", // base url
+    failureURL: "http://localhost:8080", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
@@ -54,15 +54,15 @@ module.exports = {
     ENABLED: false,
     IDLE_TIME: 60, // Time in seconds before the bot disconnects from an idle voice channel
     MAX_SEARCH_RESULTS: 5,
-    DEFAULT_SOURCE: "SC", // YT = Youtube, YTM = Youtube Music, SC = SoundCloud
+    DEFAULT_SOURCE: "YT", // YT = Youtube, YTM = Youtube Music, SC = SoundCloud
     // Add any number of lavalink nodes here
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
       {
-        host: "localhost",
-        port: 2333,
-        password: "youshallnotpass",
-        id: "Local Node",
+        host: "lava.fypmoon.org",
+        port: 11169,
+        password: "moonmachine",
+        id: "Music",
         secure: false,
       },
     ],
@@ -70,14 +70,14 @@ module.exports = {
 
   GIVEAWAYS: {
     ENABLED: true,
-    REACTION: "🎁",
+    REACTION: "<a:giveaway:1186936968504950815>",
     START_EMBED: "#FF468A",
     END_EMBED: "#FF468A",
   },
 
   IMAGE: {
-    ENABLED: false,
-    BASE_API: "https://strangeapi.hostz.me/api",
+    ENABLED: true,
+    BASE_API: "https://strangeapi.fun/api",
   },
 
   INVITE: {
@@ -105,8 +105,8 @@ module.exports = {
   PRESENCE: {
     ENABLED: true, // Whether or not the bot should update its status
     STATUS: "online", // The bot's status [online, idle, dnd, invisible]
-    TYPE: "PLAYING", // Status type for the bot [PLAYING | LISTENING | WATCHING | COMPETING]
-    MESSAGE: "DISCORD/FAIZUR XD", // Your bot status message
+    TYPE: "WATCHING", // Status type for the bot [PLAYING | LISTENING | WATCHING | COMPETING]
+    MESSAGE: "illegal Nagar", // Your bot status message
   },
 
   STATS: {
@@ -118,10 +118,10 @@ module.exports = {
   SUGGESTIONS: {
     ENABLED: true, // Should the suggestion system be enabled
     EMOJI: {
-      UP_VOTE: "⬆️",
-      DOWN_VOTE: "⬇️",
+      UP_VOTE: "<a:ashup:1207310258314285096>",
+      DOWN_VOTE: "<a:ashdown:1207310263871868928>",
     },
-    DEFAULT_EMBED: "#4F545C",
+    DEFAULT_EMBED: "#FFFFFF",
     APPROVED_EMBED: "#43B581",
     DENIED_EMBED: "#F04747",
   },

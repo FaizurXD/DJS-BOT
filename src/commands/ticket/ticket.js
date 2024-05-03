@@ -340,6 +340,7 @@ async function ticketModalSetup({ guild, channel, member }, targetChannel, setti
 
   // send ticket message
   const embed = new EmbedBuilder()
+  .setColorconst embed = new EmbedBuilder()
   .setColor(EMBED_COLORS.BOT_EMBED)
   .setAuthor({ name: title || "Support Ticket" })
   .setDescription(description || "Please use the button below to create a ticket")

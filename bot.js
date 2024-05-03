@@ -1,6 +1,9 @@
 require("dotenv").config();
 require("module-alias/register");
 
+// Add the 'http' module
+const http = require("http");
+
 // register extenders
 require("@helpers/extenders/Message");
 require("@helpers/extenders/Guild");
@@ -25,6 +28,22 @@ process.on("unhandledRejection", (err) => client.logger.error(`Unhandled excepti
 (async () => {
   // check for updates
   await checkForUpdates();
+
+  // Start a basic HTTP server
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write('<!DOCTYPE html>');
+    res.write('<html>');
+    res.write('<head><title>Bot Status</title></head>');
+    res.write('<body>');
+    res.write('<h1>Bot has been started</h1>');
+    res.write('</body>');
+    res.write('</html>');
+    res.end();
+  });
+
+  // Listen on port 8080
+  server.listen(8080);
 
   // start the dashboard
   if (client.config.DASHBOARD.enabled) {

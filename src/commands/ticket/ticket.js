@@ -340,25 +340,18 @@ async function ticketModalSetup({ guild, channel, member }, targetChannel, setti
 
   // send ticket message
   const embed = new EmbedBuilder()
-  .setColor(EMBED_COLORS.BOT_EMBED)
-  .setAuthor(title || "Support Ticket")
-  .setDescription(description || "Please use the button below to create a ticket")
-  .setFooter(footer || "You can only have 1 open ticket at a time!");
+    .setColor(EMBED_COLORS.BOT_EMBED)
+    .setAuthor({ name: title || "Support Ticket" })
+    .setDescription(description || "Please use the button below to create a ticket")
+    .setFooter({ text: footer || "You can only have 1 open ticket at a time!" });
 
-const tktBtnRow = new ActionRowBuilder().addComponents(
-  new ButtonBuilder().setLabel("Open a ticket").setCustomId("TICKET_CREATE").setStyle(ButtonStyle.Success)
-);
+  const tktBtnRow = new ActionRowBuilder().addComponents(
+    new ButtonBuilder().setLabel("Open a ticket").setCustomId("TICKET_CREATE").setStyle(ButtonStyle.Success)
+  );
 
-const ticketMessage = await targetChannel.send({ embeds: [embed], components: [tktBtnRow] });
-
-// Add the ticket channel to the message
-const ticketChannel = `<#${targetChannel.id}>`;
-const ticketCreatedMessage = `Ticket created! Check it out at ${ticketChannel}. 🔥`;
-
-await interaction.followUp(ticketCreatedMessage);
-
-await modal.deleteReply();
-await sentMsg.edit({ content: "Done! Ticket Message Created", components: [] });
+  await targetChannel.send({ embeds: [embed], components: [tktBtnRow] });
+  await modal.deleteReply();
+  await sentMsg.edit({ content: "Done! Ticket Message Created", components: [] });
 }
 
 async function setupLogChannel(target, settings) {

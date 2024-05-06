@@ -1,5 +1,3 @@
-require("./animation.js");
-
 require("dotenv").config();
 
 require("module-alias/register");

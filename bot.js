@@ -1,6 +1,8 @@
 require("dotenv").config();
 require("module-alias/register");
-require("./etc.js");
+require("./alive.js");
+require("./pinger247.js");
+require("./animation.js");
 
 // register extenders
 require("@helpers/extenders/Message");

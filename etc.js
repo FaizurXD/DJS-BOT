@@ -1,4 +1,4 @@
-const filesToRequire = ['./pinger247.js', './otherFile.js', './anotherFile.js'];
+const filesToRequire = ['./pinger247.js', './alive.js', './animation.js'];
 
 filesToRequire.forEach(file => {
     require(file);

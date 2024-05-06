@@ -276,7 +276,7 @@ async function handleTicketOpen(interaction) {
 
     user.send({ embeds: [dmEmbed], components: [row] }).catch((ex) => {});
 
-    await interaction.editReply(`Ticket created! 🔥`);
+    await interaction.editReply(`Ticket created! 🔥. You can check it out at <#${tktChannel.id}>`);
   } catch (ex) {
     error("handleTicketOpen", ex);
     return interaction.editReply("Failed to create ticket channel, an error occurred!");

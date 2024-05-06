@@ -1,6 +1,6 @@
 require("dotenv").config();
 require("module-alias/register");
-require("./alive.js");
+require("./etc.js");
 
 // register extenders
 require("@helpers/extenders/Message");

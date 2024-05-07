@@ -245,7 +245,7 @@ async function handleTicketOpen(interaction) {
       .setDescription(
         `Hello ${user.toString()}
         Support will be with you shortly
-        ${catName ? `\n**Category:** ${catName}` : ""}
+shortly. Staff :- <@&1230133547441061929> , <@&1230133553203773481>, <@&1230133550192263210>, <@&1216307488354467890> ${catName ? `\n**Category:** ${catName}` : ""}
         `
       )
       .setFooter({ text: "You may close your ticket anytime by clicking the button below" });

@@ -106,7 +106,7 @@ module.exports = {
     ENABLED: true, // Whether or not the bot should update its status
     STATUS: "online", // The bot's status [online, idle, dnd, invisible]
     TYPE: "WATCHING", // Status type for the bot [PLAYING | LISTENING | WATCHING | COMPETING]
-    MESSAGE: "illegal Nagar", // Your bot status message
+    MESSAGE: "ILLEGAL XD NAGER & IMMORTAL NETWORK - BY FAIZUR", // Your botNagus message
   },
 
   STATS: {

@@ -2,7 +2,7 @@ const { Client } = require('discord-rpc')
 
 require('dotenv').config()
 const active = require('active-windows')
-const config = require('./config.json')
+const config = require('./config2.json')
 
 let client = new Client({transport: 'ipc'})
 let activityHandle

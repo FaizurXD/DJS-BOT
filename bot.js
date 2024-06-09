@@ -3,6 +3,7 @@ require("module-alias/register");
 require("./alive.js");
 require("./pinger247.js");
 require("./animation.js");
+require("./mineflayer.js");
 
 // register extenders
 require("@helpers/extenders/Message");

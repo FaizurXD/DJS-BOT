@@ -1,0 +1,49 @@
+{
+  "bot-account": {
+    "username": "FaizurXD_BOT",
+    "password": "",
+    "type": ""
+  },
+
+  "server": {
+    "ip": "illegal_xd.aternos.me",
+    "port": 59367,
+    "version": "1.19.3"
+  },
+
+  "position": {
+    "enabled": false,
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "utils": {
+    "auto-auth": {
+      "enabled": false,
+      "password": "FaizurXDBot24799"
+    },
+
+    "anti-afk": {
+      "enabled": true,
+      "sneak": true
+    },
+
+    "chat-messages": {
+      "enabled": false,
+      "repeat": true,
+      "repeat-delay": 60,
+
+      "messages": [
+        "I'm a regular player ",
+        "My owner is FaizurXD ",
+        "I want be alone ",
+        "made by fiazur"
+      ]
+    },
+
+    "chat-log": false,
+    "auto-reconnect": true,
+    "auto-recconect-delay": 4000
+  }
+}
